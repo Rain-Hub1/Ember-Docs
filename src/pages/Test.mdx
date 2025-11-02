@@ -1,0 +1,25 @@
+---
+title: 'Guia de Testes da API'
+description: 'Aprenda a interagir e testar os endpoints da API da Video Platform usando ferramentas como cURL e o próprio navegador.'
+---
+
+# Guia de Testes da API
+
+A API da Video Platform é o coração da aplicação. Testar seus endpoints é fundamental para garantir que tudo está funcionando corretamente.
+
+A URL base para todos os endpoints da API é:
+`https://leo-backend-completo.onrender.com`
+
+---
+
+## Listar Vídeos
+
+Retorna uma lista de todos os metadados de vídeos no banco de dados.
+
+| Método | Endpoint | Descrição |
+| :--- | :--- | :--- |
+| `GET` | `/videos` | Retorna um array JSON com os vídeos. |
+
+**Exemplo de Requisição (Navegador ou cURL):**
+```bash
+curl https://leo-backend-completo.onrender.com/videos
