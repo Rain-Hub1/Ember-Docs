@@ -1,0 +1,27 @@
+# Referência da API
+
+Esta seção documenta os endpoints disponíveis na API do nosso projeto de vídeo.
+
+A URL base para todos os endpoints é:
+`https://leo-backend-completo.onrender.com`
+
+---
+
+## `GET /videos`
+
+Retorna uma lista de todos os vídeos que foram enviados.
+
+| Parâmetro | Tipo | Descrição |
+| :--- | :--- | :--- |
+| Nenhum | - | Não aceita parâmetros. |
+
+**Exemplo de Resposta (`200 OK`):**
+
+```json
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "original_name": "meu_video.mp4",
+    "created_at": "2025-11-02T10:30:00Z"
+  }
+]
