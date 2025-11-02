@@ -34,7 +34,7 @@ async function generateSidebar() {
 
 export default defineConfig({
   title: 'Ember Docs',
-  description: 'Documentação Genérica e Automatizada',
+  description: 'Documentação no estilo Fuma Docs.',
   base: '/Ember-Docs/',
   srcDir: 'pages',
   cleanUrls: true,
@@ -42,21 +42,18 @@ export default defineConfig({
   async buildEnd() {},
 
   themeConfig: {
-    siteTitle: 'Ember Docs',
+    siteTitle: false,
+    logo: false,
     sidebar: await generateSidebar(),
     nav: [
-      { text: 'Início', link: '/' },
-      { text: 'Guias', link: '/guides/01.api-reference' }
+      { text: 'Documentação', link: '/guides/01.api-reference' },
+      { text: 'GitHub', link: 'https://github.com/Rain-Hub1/Ember-Docs' }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Rain-Hub1/Ember-Docs' }
     ],
     search: {
       provider: 'local'
-    },
-    footer: {
-      message: 'Documentação gerada dinamicamente.',
-      copyright: 'Copyright © 2025-presente'
     }
   }
 });
