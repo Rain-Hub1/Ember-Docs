@@ -1,59 +1,51 @@
+/* Fuma Docs Theme Overhaul */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
 :root {
-  --vp-c-bg: #111111;
-  --vp-c-bg-soft: #1a1a1a;
-  --vp-c-bg-mute: #242424;
-  --vp-c-bg-alt: #161616;
+  --vp-font-family-base: 'Inter', sans-serif;
+  --vp-c-bg: #000000;
+  --vp-c-bg-soft: #111;
+  --vp-c-bg-mute: #181818;
+  --vp-c-text-1: #ffffff;
+  --vp-c-text-2: #999999;
+  --vp-c-border: #222;
+  --vp-c-brand-1: #3b82f6;
+  --vp-c-brand-2: #60a5fa;
+}
 
-  --vp-c-text-1: rgba(255, 255, 255, 0.87);
-  --vp-c-text-2: rgba(235, 235, 245, 0.6);
-  --vp-c-text-3: rgba(235, 235, 245, 0.38);
+/* Remove todos os elementos padrão da página inicial */
+.VPHome { display: none; }
 
-  --vp-c-border: #2f2f2f;
-  --vp-c-divider: #2f2f2f;
-
-  --vp-c-brand-1: #646cff;
-  --vp-c-brand-2: #747bff;
-  --vp-c-brand-3: #a8aaff;
-
-  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+/* Estilo da Página de Conteúdo */
+.VPDoc {
+  padding: 32px 24px 96px !important;
 }
 
 .VPDoc h1 {
-  letter-spacing: -0.02em;
-  line-height: 40px;
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
 }
 
 .VPDoc h1 + p {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1.125rem;
   color: var(--vp-c-text-2);
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-
-.VPSidebar {
-  border-right: none;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
 }
 
 .VPNav {
-  background-color: rgba(17, 17, 17, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--vp-c-border);
 }
 
-.vp-doc div[class*='language-'] {
-  border-radius: 8px;
-  border: 1px solid var(--vp-c-divider);
+.VPSidebar {
   background-color: var(--vp-c-bg-soft);
+  border-right: 1px solid var(--vp-c-border);
 }
 
-.custom-component {
+/* Alerta/Callout Component */
+.custom-block.tip {
   background-color: var(--vp-c-bg-mute);
-  border-left: 3px solid var(--vp-c-brand-1);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 0 8px 8px 0;
+  border-color: var(--vp-c-brand-1);
 }
